@@ -1,0 +1,32 @@
+@startuml
+
+NotificacionAusencia : Notifica cuando la disponibilidad de los puntos de venta es 0
+NotificacionVencimiento : Notifica cuando es fecha de vencimiento de productos no vendidos en puntos de venta 
+EncoladoDeProductos : Genera una cola de productos a producir y gestionando los recursos disponibles
+ObtencionDeInsumos : Genera una "orden de compra" 
+Empaquetado : Genera la informacion del producto en el sistema 
+Distribucion: Genera una ruta de distribucion y una notificacion al punto de venta 
+Facturacion : Carga la informacion de los productos al sistema 
+
+[*] -> EnEspera : Inicio
+ObtencionDeInsumos --> Produccion 
+
+Produccion -> Refrigerado 
+Empaquetado <- Refrigerado
+Distribucion <-- Empaquetado 
+Facturacion <-- Distribucion
+EnEspera <- Facturacion: Encolado De Vencimiento y Disponibilidad
+EnEspera --> Notificado 
+Notificado --> NotificacionVencimiento
+Notificado --> NotificacionAusencia
+NotificacionAusencia --> EncoladoDeProductos  
+NotificacionVencimiento --> ReposicionYReemplazo
+ReposicionYReemplazo -> EncoladoDeProductos
+
+
+EncoladoDeProductos -> InsumosInsuficientes 
+InsumosInsuficientes -> ObtencionDeInsumos
+EncoladoDeProductos -> InsumosSuficientes 
+InsumosSuficientes -> Produccion 
+
+@enduml
