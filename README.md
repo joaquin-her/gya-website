@@ -4,5 +4,10 @@ Gya dulzuras es el emprendimiento de la tia, que al estar cerca, podemos analiza
 ![DiagramaDeEstados](diagrams/diagamaDeEstados.png)
 
 ### Objetivo: 
-Crear un sistema que *simplifique* y* automatice* tareas del ciclo, con el fin de **alivianar el esfuerzo del personal interviniente** por medio de *notificaciones* y un *panel general de control* para control de stock, de ventas, y de tareas pendientes que *facilite la toma de decisiones*. 
+Crear un sistema que *simplifique* y *automatice* tareas del ciclo, con el fin de **alivianar el esfuerzo del personal interviniente** por medio de *notificaciones* y un *panel general de control* para control de stock, de ventas, y de tareas pendientes que *facilite la toma de decisiones*. 
 Aunque el sistema pueda o no ser utilizado por el usuario objetivo, la **finalidad es el aprendizaje**.
+
+### Metodologia: Desarrollo incremental
+
+Creacion de un MVP con funcionalidades minimas de stock e interfaz de usuario por intermedio de [iteraciones](docs/project.md)
+
