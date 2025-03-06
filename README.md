@@ -11,3 +11,5 @@ Aunque el sistema pueda o no ser utilizado por el usuario objetivo, la **finalid
 
 Creacion de un MVP con funcionalidades minimas de stock e interfaz de usuario por intermedio de [iteraciones](docs/project.md)
 
+### Contenerizado:
+Se agergó un entorno de docker al repositorio. Las instrucciones estan en [docker](docs/docker.md)
