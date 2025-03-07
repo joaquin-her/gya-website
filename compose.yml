@@ -1,0 +1,13 @@
+services: 
+  web: 
+    build:
+     context: backend
+     target: builder
+    container_name: backend-server
+
+    # Bindeamos el puerto 5000 del contenedor al 8000 del localhost
+    ports: 
+      - '8000:5000'
+    # Creamos un volumen para no tener que estar relevantando el contenedor
+    volumes:
+      - ./backend:/app     
