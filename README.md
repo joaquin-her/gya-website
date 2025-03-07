@@ -13,3 +13,9 @@ Creacion de un MVP con funcionalidades minimas de stock e interfaz de usuario po
 
 ### Contenerizado:
 Se agergó un entorno de docker al repositorio. Las instrucciones estan en [docker](docs/docker.md)
+
+### Tecnologias 
+- Docker 
+- Flask 
+
+La justificacion está en [arquitectura](docs/arquitectura.md)
